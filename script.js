@@ -4,10 +4,10 @@ var password = document.querySelector("#password");
 
 // variables for password criteria
 var numbers = "0123456789";
-var lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var userdataCriteria = "";
-var specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+var specialSymbols = " !\"#-./:;<=>?@[\]^_`{$%&'()*+,|}~";
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -55,11 +55,11 @@ function writePassword() {
 
     // Use the criteria that are selected to generate the password
     if (lowercaseChar) {
-        userdataCriteria += lowercaseAlphabet;
+        userdataCriteria += lowercaseLetters;
     }
 
     if (uppercaseChar) {
-        userdataCriteria += uppercaseAlphabet;
+        userdataCriteria += uppercaseLetters;
     }
 
     if (num) {
@@ -67,7 +67,7 @@ function writePassword() {
     }
 
     if (specialChar) {
-        userdataCriteria += specialCharacters;
+        userdataCriteria += specialSymbols;
     }
 
     // Generate random password based on selected criteria
