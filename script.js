@@ -79,8 +79,8 @@ function writePassword() {
 
 }
 
-// Call the function
-// writePassword();
+// Call function
+// "writePassword();""
 
 // <!-- ```
 // GIVEN I need a new, secure password -->
